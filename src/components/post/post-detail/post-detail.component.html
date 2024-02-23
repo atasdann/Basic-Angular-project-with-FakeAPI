@@ -1,0 +1,14 @@
+<div class="card mb-2">
+  <div class="card-body" *ngIf="post">
+    <h4 class="card-title">{{post.title}}</h4>
+    <p class="card-text">{{post.body}}</p>
+    <span class="badge bg-primary me-1" *ngFor="let tag of post.tags">{{tag}}</span>
+    <div *ngIf="user">
+      <div>{{user.firstName+" "+user.lastName}}</div>
+    </div>
+    <div class="mt-2">
+      <div *ngFor="let comment of comments">{{comment.body}}</div>
+    </div>
+
+  </div>
+</div>
